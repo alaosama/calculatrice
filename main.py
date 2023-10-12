@@ -38,11 +38,18 @@ while True:
         print(first_number * second_number)
     else:
         result = None
-        
-    if result != None:
-        print("Result is:", result)
-    else:
-        print("unexpected error")
+
+    try:
+        repeat = input("Do you want to perform another operation (y /n): ")            
+        if repeat == "y":
+            continue
+        elif repeat == "n":
+            print("See you soon.")
+            break
+        else:
+            raise ValueError
+    except ValueError:
+            print("print y for yes or n for non !!!")
             
             
             
